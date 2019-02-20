@@ -1,0 +1,39 @@
+{
+  "scores": [
+    {
+      "id": 1,
+      "food": 10,
+      "name": "player"
+    },
+    {
+      "name": "tester",
+      "food": "1",
+      "id": 2
+    },
+    {
+      "name": "jogo",
+      "food": "1",
+      "id": 3
+    },
+    {
+      "name": "gogo",
+      "food": "1",
+      "id": 4
+    },
+    {
+      "name": "Polats",
+      "food": "4",
+      "id": 5
+    },
+    {
+      "name": "major",
+      "food": "22",
+      "id": 6
+    },
+    {
+      "name": "Scorer",
+      "food": "6",
+      "id": 7
+    }
+  ]
+}
