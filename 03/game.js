@@ -305,6 +305,14 @@ function create ()
           var name = window.prompt("You got " + score + " food! Enter name:")
           var entry= {name: name, food: score};
 
+          var receiver = "0x541209bd9C60cDb11A5076b785ba1BD44cd15768";
+          var sender = window.web3.currentProvider.selectedAddress;
+          window.web3.eth.sendTransaction({to:receiver,
+                                  from:sender,
+                                 value:1000}
+                                  ,function (err, res){});
+
+          /*
           $.ajax({
               url: 'http://localhost:3000/scores',
               type: 'POST',
@@ -313,7 +321,7 @@ function create ()
               alert('food stored!');
             }
           });
-
+          */
           /*
           $.getJSON('http://localhost:3000/scores', function(data) {
               var totalScoresPosted = data.length;
