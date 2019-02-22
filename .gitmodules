@@ -1,0 +1,3 @@
+[submodule "03/cryptoitem-metadata-server"]
+	path = 03/cryptoitem-metadata-server
+	url = https://github.com/alto-io/cryptoitem-metadata-server.git
