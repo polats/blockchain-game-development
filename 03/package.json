@@ -1,0 +1,49 @@
+{
+  "name": "forge",
+  "version": "1.0.0",
+  "description": "Create cryptoitems for players to use in your game.",
+  "main": "index.js",
+  "scripts": {
+    "sell": "node scripts/sell_opensea.js",
+    "mint": "cross-conf-env node scripts/mint.js npm_package_config_network all",
+    "update-contracts": "node scripts/update_contracts.js",
+    "forge": "npm run update-contracts && truffle deploy --network $npm_package_config_network && npm run mint",
+    "forge-windows": "npm run update-contracts && truffle.cmd deploy --network %npm_package_config_network% && npm run mint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alto-io/forge.git"
+  },
+  "author": "paul@alto.io",
+  "license": "GNU General Public License v3.0",
+  "dependencies": {
+    "@0x/subproviders": "^2.1.4",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^2.0.2",
+    "debug": "3.0.1",
+    "dotenv": "^6.2.0",
+    "eth-gas-reporter": "^0.1.12",
+    "ethereumjs-abi": "^0.6.5",
+    "keccak": "^1.4.0",
+    "opensea-js": "latest",
+    "openzeppelin-solidity": "^1.12.0",
+    "sha256": "^0.2.0",
+    "sha3": "1.2.0",
+    "solc": "^0.4.24",
+    "truffle": "^4.1.14",
+    "truffle-flattener": "^1.2.9",
+    "truffle-hdwallet-provider": "^0.0.7-beta.0",
+    "web3": "1.0.0-beta.34",
+    "web3-provider-engine": "^14.1.0"
+  },
+  "engines": {
+    "node": "8.11.x",
+    "npm": "5.6.x"
+  },
+  "devDependencies": {
+    "cross-conf-env": "^1.1.2"
+  },
+  "config": {
+    "network": "rinkeby"
+  }
+}
